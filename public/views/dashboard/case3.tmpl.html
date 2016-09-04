@@ -27,6 +27,7 @@
 					<thead>
 						<tr>
 							<th>Sl.No</th>
+							<th><i class="fa fa-file-text-o" aria-hidden="true"></i></th>
 							<th>SourceZip</th>
 							<th>DestinationZip</th>
 							<th>ArrivalDate</th>
@@ -37,10 +38,15 @@
 					<tbody>
 						<tr ng-repeat="ship in shippingList">
 							<td>{{$index+1}}</td>
+							<td>
+								<button type="button" class="btn btn-default btn-xs">
+									<i class="fa fa-files-o" aria-hidden="true"></i>
+								</button>
+							</td>
 							<td>{{ship.sourceZip}}</td>
 							<td>{{ship.destinationZip}}</td>
-							<td>{{ship.arrivalDate}}</td>
-							<td>{{ship.PostDate}}</td>
+							<td>{{ship.arrivalDate | date :  "dd/MM/y" }}</td>
+							<td>{{ship.PostDate | date :  "dd/MM/y" }}</td>
 
 						</tr>
 					</tbody>
