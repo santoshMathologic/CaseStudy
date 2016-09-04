@@ -1,0 +1,33 @@
+[
+    { 
+    "_id" :1, 
+    "positionName" : "Point guard"
+  
+},
+{ 
+    "_id" :2, 
+    "positionName" : "Shooting guard" 
+  
+},
+{ 
+    "_id" :3, 
+    "positionName" : "Small forward" 
+  
+},
+{ 
+    "_id" :4, 
+    "positionName" : "Power forward" 
+  
+},
+{ 
+    "_id" : 5, 
+    "positionName" : "Center" 
+  
+},
+{ 
+    "_id" :6, 
+    "positionName" : "pitcher" 
+  
+}
+
+]
