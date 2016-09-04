@@ -75,7 +75,41 @@ angular
             })
           }
         }
+      }).state('dashboard.case2', {
+        url: '/case2',
+        controller: 'case2Ctrl',
+        templateUrl: 'scripts/directives/dashboard/case2/case2.directive.html',
+        resolve: {
+          loadMyFiles: function ($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name: 'caseStudyApp',
+              files: [
+                'scripts/controllers/case2.js',
+                'scripts/directives/dashboard/case2/case2.js',
+              ]
+            })
+          }
+        }
+      }).state('dashboard.case3', {
+        url: '/case3',
+        controller: 'case3Ctrl',
+        templateUrl: 'scripts/directives/dashboard/case3/case3.directive.html',
+        resolve: {
+          loadMyFiles: function ($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name: 'caseStudyApp',
+              files: [
+                'scripts/controllers/case3.js',
+                'scripts/directives/dashboard/case3/case3.js',
+              ]
+            })
+          }
+        }
       })
+
+
+
+
 
   }]);
 
