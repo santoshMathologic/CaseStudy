@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 var user   = require("./user.js");
+var position   = require("./footballer.js");
 
 
 module.exports = router;
@@ -15,3 +16,7 @@ module.exports = router;
 //Routes for trainstation
 router.get('/api/v1/users', user.getUsers);
 router.post('/api/v1/users', user.createUser);
+
+//Routes for trainstation
+router.get('/api/v1/positions', position.getPosition);
+router.post('/api/v1/positions', position.createPosition);
