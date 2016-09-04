@@ -15,3 +15,9 @@
   overflow: hidden;
   background-color: #e5e5e5;
 }
+.infoStyle{
+  width: auto;
+  height:450px;
+  background: rgb(234, 234, 234)
+
+}

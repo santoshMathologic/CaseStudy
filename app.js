@@ -58,6 +58,21 @@ function normalizePort(val) {
   return false;
 }
 
+app.all('/*', function (req, res, next) {
+  // CORS headers
+  res.header("Access-Control-Allow-Origin", req.headers.origin); // restrict it to the required domain
+  //res.header("Access-Control-Allow-Origin", '*'); // restrict it to the required domain
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Credentials', true);
+  // Set custom headers for CORS
+  res.header('Access-Control-Allow-Headers', 'Content-type,Accept,X-Access-Token,X-Key,Cookie');
+  if (req.method == 'OPTIONS') {
+    res.status(200).end();
+  } else {
+    next();
+  }
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
