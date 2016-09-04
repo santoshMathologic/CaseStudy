@@ -91,3 +91,8 @@ deleteUser : function (req, res) {
 
  
   }
+
+  
+module.exports = user; 
+
+                                                        
