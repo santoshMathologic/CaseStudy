@@ -21,3 +21,12 @@
   background: rgb(234, 234, 234)
 
 }
+
+.errspan {
+      float: left;
+    margin-left: 9px;
+    margin-top: -31px;
+    position: relative;
+    z-index: 2;
+    
+}

@@ -8,8 +8,28 @@ angular.module('caseStudyApp')
       scope: {},
       controller: function ($scope, $state, $window, $log, $q, $anchorScroll, $timeout, $location, $http) {
 
+        $scope.shippingList = [];
+        $scope.query = {
+          limit: 10,
+          page: 1,
+          order: "sourceZip"
+        }
 
-      
+
+
+        var apishipping = "http://localhost:3000/api/v1/shipping"
+        $scope.getShipping = function () {
+          $http.get(apishipping, { params: $scope.query }).then(function (response) {
+            $scope.shippingList = response.data.results;
+            $scope.currentPage = response.data.current;
+            $scope.perPage = response.data.options.perPage;
+            $scope.totalPages = response.data.last;
+            $scope.totalRecords = response.data.count;
+
+          })
+        }
+        $scope.getShipping();
+
 
 
 
