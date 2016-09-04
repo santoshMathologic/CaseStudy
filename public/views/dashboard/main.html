@@ -1,25 +1,27 @@
-<div>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">CASE STUDY</a>
+<div id="wrapper">
+
+
+    <div>
+        <nav class="navbar navbar-inverse" style="border-radius:0px">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" ui-sref="dashboard.home">CASE STUDY</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a ui-sref="dashboard.case1"><i class="fa fa-adjust fa-fw"></i>CASE STUDY 1</a>
+                       <li><a ui-sref="dashboard.case1"><i class="fa fa-adjust fa-fw"></i>CASE STUDY 2</a>
+                       <li><a ui-sref="dashboard.case1"><i class="fa fa-adjust fa-fw"></i>CASE STUDY 1</a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
             </div>
-            <ul class="nav navbar-nav">
-               
-            <li ui-sref-active="active">
-                <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Page1</a>
-            </li>
-               
-            <li>
-                <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Page2</a>
-            </li>
-               
-            <li>
-                <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Page3</a>
-            </li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
-
+    <div id="page-wrapper" style="min-height: 561px;">
+        <div ui-view></div>
+    </div>
 </div>
