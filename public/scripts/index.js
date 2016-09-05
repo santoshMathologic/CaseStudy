@@ -106,11 +106,22 @@ angular
             })
           }
         }
+      }).state('dashboard.case4', {
+        url: '/case4',
+        controller: 'case4Ctrl',
+        templateUrl: 'scripts/directives/dashboard/case4/case4.directive.html',
+        resolve: {
+          loadMyFiles: function ($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name: 'caseStudyApp',
+              files: [
+                'scripts/controllers/case4.js',
+                'scripts/directives/dashboard/case4/case4.js',
+              ]
+            })
+          }
+        }
       })
-
-
-
-
 
   }]);
 
