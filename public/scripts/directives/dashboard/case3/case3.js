@@ -15,6 +15,9 @@ angular.module('caseStudyApp')
           order: "sourceZip"
         }
 
+        $scope.currentPage=1;
+$scope.itemsPerPage=10;
+
         $scope.users = []; //declare an empty array
         $http.get("customJson/shipping.json").success(function (response) {
           $scope.users = response;  //ajax request to fetch data into $scope.data

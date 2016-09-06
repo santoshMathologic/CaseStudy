@@ -142,8 +142,8 @@
 					</thead>
 					<tbody>
 						<!--<tr ng-repeat="ship in shippingList"> !-->
-						<tr dir-paginate="ship in shippingList|orderBy:sortKey:reverse|itemsPerPage:10">
-							<td>{{$index+1}}</td>
+						<tr dir-paginate="ship in shippingList|orderBy:sortKey:reverse|itemsPerPage:itemsPerPage" current-page="currentPage">
+							 <td>{{itemsPerPage *(currentPage-1)+$index+1}}</td> 
 							<td>
 								<button type="button" class="btn btn-default btn-xs">
 									<i class="fa fa-files-o" aria-hidden="true"></i>
@@ -159,8 +159,10 @@
 					<tfoot>
 
 						<tr>
+							<td>
 							<dir-pagination-controls max-size="10" direction-links="true" boundary-links="true">
 							</dir-pagination-controls>
+							</td>
 						</tr>
 
 						<tr>
