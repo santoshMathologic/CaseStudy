@@ -19,8 +19,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 
-					
-							<div class="input-group">
+
+						<div class="input-group">
 							<input type="text" class="form-control">
 							<span class="input-group-btn">
 						
@@ -28,11 +28,11 @@
    					    </span>
 						</div>
 
-						
-						
 
-					
-						
+
+
+
+
 
 
 
@@ -48,6 +48,27 @@
 				</div>
 
 				<div class="divider"></div>
+
+
+				<div class="row">
+					<div class="col-lg-12" ng-repeat="user in userInformation">
+						<div class="col-lg-2">
+							<img width="100" style="border-radius: 5px;" ng-src="{{user.userPics}}"></img>
+						</div>
+						<div class="col-lg-10">
+							<span><b style="color:blue">{{user.name}} </b> {{user.description}} </span>
+							<br> {{user.sendTime}} <a href="#" ng-click="">Comment</a> <a href="#"> Like </a> <a href="#"> See Wall-to-Wall </a>
+
+						</div>
+						<div class="col-md-6">
+							<textarea cols="15" rows="5" class="form-control"></textarea>
+						</div>
+					</div>
+				</div>
+
+
+
+
 
 
 
