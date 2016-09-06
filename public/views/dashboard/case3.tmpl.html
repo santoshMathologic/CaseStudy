@@ -129,15 +129,18 @@
 				<table class="table table-striped table-condensed table-hover">
 					<thead>
 						<tr>
-							<th>Sl.No</th>
+							<th style="width:80px">Sl.No</th>
 							<th><i class="fa fa-file-text-o" aria-hidden="true"></i></th>
 							<th ng-click="sort('sourceZip')">
-								<span class="glyphicon sort-icon" ng-show="sortKey=='sourceZip'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>SourceZip
+								<span class="glyphicon sort-icon" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>SourceZip
 							</th>
 							<th ng-click="sort('destinationZip')">
-								<span class="glyphicon sort-icon" ng-show="sortKey=='destinationZip'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>DestinationZip</th>
-							<th>ArrivalDate</th>
-							<th>PostDate</th>
+								<span class="glyphicon sort-icon" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>DestinationZip</th>
+							<th ng-click="sort('arrivalDate')">
+								<span class="glyphicon sort-icon" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>ArrivalDay</th>
+
+							<th ng-click="sort('PostDate')">
+								<span class="glyphicon sort-icon" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>PostDay</th>
 
 						</tr>
 					</thead>
@@ -160,7 +163,7 @@
 					<tfoot>
 
 						<tr>
-							<td>
+							<td colspan="9" class="text-center">
 							<dir-pagination-controls max-size="10" direction-links="true" boundary-links="true">
 							</dir-pagination-controls>
 							</td>
