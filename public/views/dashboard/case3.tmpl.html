@@ -18,6 +18,109 @@
 
 	<br>
 
+	<div class="form-horizontal" role="form">
+		<div class="form-group">
+			<div class="col-xs-3">
+				<label for="class_type">Purchase Order</label>
+			</div>
+			<div class="col-sm-2">
+				<select id="class_type" class="form-control input-sm" autocomplete="off">
+                <option>=</option>
+                <option>Premium Economy</option>
+                <option>Club World</option>
+                <option>First Class</option>
+            </select>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="form-group">
+					<input type="email" class="form-control" id="email">
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-xs-3">
+				<label for="class_type">PO Date</label>
+			</div>
+			<div class="col-sm-2">
+				<select id="class_type" class="form-control input-sm" autocomplete="off">
+                <option>=</option>
+                <option>Premium Economy</option>
+                <option>Club World</option>
+                <option>First Class</option>
+            </select>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="form-group">
+					<input type="email" class="form-control" id="email">
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-xs-3">
+				<label for="class_type">SourceZip</label>
+			</div>
+			<div class="col-sm-2">
+				<select id="class_type" class="form-control input-sm" autocomplete="off">
+                <option>=</option>
+                <option>Premium Economy</option>
+                <option>Club World</option>
+                <option>First Class</option>
+            </select>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="form-group">
+					<input type="email" class="form-control" id="email">
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-xs-3">
+				<label for="class_type">Destination Zip</label>
+			</div>
+			<div class="col-sm-2">
+				<select id="class_type" class="form-control input-sm" autocomplete="off">
+                <option>=</option>
+                <option>Premium Economy</option>
+                <option>Club World</option>
+                <option>First Class</option>
+            </select>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="form-group">
+					<input type="email" class="form-control" id="email">
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-xs-3">
+				<label for="class_type">Arrival Date</label>
+			</div>
+			<div class="col-sm-2">
+				<select id="class_type" class="form-control input-sm" autocomplete="off">
+                <option>=</option>
+                <option>Premium Economy</option>
+                <option>Club World</option>
+                <option>First Class</option>
+            </select>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="form-group">
+					<input type="email" class="form-control" id="email">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
 	<div class="panel panel-default">
 		<div class="panel-heading">Panel Heading</div>
 		<div class="panel-body">
@@ -28,9 +131,9 @@
 						<tr>
 							<th>Sl.No</th>
 							<th><i class="fa fa-file-text-o" aria-hidden="true"></i></th>
-							<th ng-click="sort('sourceZip')"> 
-								<span class="glyphicon sort-icon" ng-show="sortKey=='sourceZip'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
-							SourceZip</th>
+							<th ng-click="sort('sourceZip')">
+								<span class="glyphicon sort-icon" ng-show="sortKey=='sourceZip'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>								SourceZip
+							</th>
 							<th>DestinationZip</th>
 							<th>ArrivalDate</th>
 							<th>PostDate</th>
@@ -39,7 +142,7 @@
 					</thead>
 					<tbody>
 						<!--<tr ng-repeat="ship in shippingList"> !-->
-							<tr dir-paginate="ship in shippingList|orderBy:sortKey:reverse|itemsPerPage:10">
+						<tr dir-paginate="ship in shippingList|orderBy:sortKey:reverse|itemsPerPage:10">
 							<td>{{$index+1}}</td>
 							<td>
 								<button type="button" class="btn btn-default btn-xs">
@@ -59,8 +162,8 @@
 							<dir-pagination-controls max-size="10" direction-links="true" boundary-links="true">
 							</dir-pagination-controls>
 						</tr>
-						
-						<!--<tr>
+
+						<tr>
 							<td colspan="9" class="text-center">
 
 								<nav>
@@ -83,7 +186,7 @@
 
 							</td>
 						</tr>
-						!-->
+
 					</tfoot>
 				</table>
 			</div>
