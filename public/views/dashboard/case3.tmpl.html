@@ -6,7 +6,7 @@
 		<div class="col-lg-12">
 
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search : Shipping Documents">
+				<input type="text" class="form-control" placeholder="Search : Shipping Documents" ng-model="comp">
 				<span class="fa fa-search fa-2x errspan"></span>
 				<span class="input-group-btn">
         <button class="btn btn-primary" type="button">Search</button>
@@ -132,9 +132,10 @@
 							<th>Sl.No</th>
 							<th><i class="fa fa-file-text-o" aria-hidden="true"></i></th>
 							<th ng-click="sort('sourceZip')">
-								<span class="glyphicon sort-icon" ng-show="sortKey=='sourceZip'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>								SourceZip
+								<span class="glyphicon sort-icon" ng-show="sortKey=='sourceZip'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>SourceZip
 							</th>
-							<th>DestinationZip</th>
+							<th ng-click="sort('destinationZip')">
+								<span class="glyphicon sort-icon" ng-show="sortKey=='destinationZip'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>DestinationZip</th>
 							<th>ArrivalDate</th>
 							<th>PostDate</th>
 
@@ -142,7 +143,7 @@
 					</thead>
 					<tbody>
 						<!--<tr ng-repeat="ship in shippingList"> !-->
-						<tr dir-paginate="ship in shippingList|orderBy:sortKey:reverse|itemsPerPage:itemsPerPage" current-page="currentPage">
+						<tr dir-paginate="ship in shippingList|orderBy:sortKey:reverse|itemsPerPage:itemsPerPage|filter: comp"" current-page="currentPage">
 							 <td>{{itemsPerPage *(currentPage-1)+$index+1}}</td> 
 							<td>
 								<button type="button" class="btn btn-default btn-xs">
